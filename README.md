@@ -56,8 +56,8 @@ project-root/
 | Pasta / Arquivo      | Descrição |
 |----------------------|-----------|
 | `src/models/`        | Contém os models do Sequelize que representam as tabelas do banco de dados. |
-| `src/controllers/`   | Responsável por lidar com as requisições HTTP (recebe os dados da rota e envia a resposta). |
-| `src/services/`      | Onde fica a lógica de negócio, intermediando entre controller e model. |
+| `src/controllers/`   | Gerencia as requisições HTTP recebidas pelo Express. Ele atua como intermediário entre o cliente e as camadas de serviço e modelo. Os controllers recebem dados da requisição (como parâmetros ou corpo), chamam as funções apropriadas do service e retornam a resposta para o cliente. Responsáveis por definir como cada rota vai ser processada. |
+| `src/services/`      | Contém a lógica de negócio da aplicação. Os services são responsáveis por manipular os dados de acordo com as regras do sistema. Eles interagem diretamente com os models para buscar ou modificar dados e podem incluir validações ou cálculos necessários antes de retornar uma resposta ao controller.|
 | `src/routes/`        | Define as rotas da aplicação e conecta com os controllers. |
 | `src/config/`        | Configurações gerais da aplicação, como a conexão com o banco de dados. |
 | `app.js`             | Arquivo principal que instancia o Express, aplica os middlewares e carrega as rotas. Inicializa o servidor, autentica com o banco de dados e sincroniza os modelos |
