@@ -1,8 +1,9 @@
 // Importando o Sequelize e o DataTypes
+const banco = require('../config/bancoDados');
 const { DataTypes } = require('sequelize');
 
 // Definindo o modelo Usuario diretamente
-const Usuario = sequelize.define('Usuario', {
+const Usuario = banco.define('Usuario', {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
