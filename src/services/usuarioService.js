@@ -19,6 +19,10 @@ function criarUsuario(nome, email, senha) {
 
 }
 
+// função buscarUmUsuario (email)
+
+// funcao logar (email, senha)
+
 module.exports = {
     buscarTodosUsuarios,
     criarUsuario

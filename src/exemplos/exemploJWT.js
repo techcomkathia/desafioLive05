@@ -5,7 +5,7 @@ const info = {id:1, nome:'Kathia', email:'Kathia@kathia'};
 const chaveSecreta = 'segredo';
 try{
     // codificando o token que vai ser composto por header, payload e assinatura
-    const token = JWT.sign(info, chaveSecreta, {expiresIn: '1h'});
+    const token = JWT.sign(info, chaveSecreta);
     console.log(token);
 
     // decodificando o token

@@ -29,6 +29,11 @@ async function criarUsuario(req, res) {
     }
 }
 
+// função logar(req, res):
+// 401 - {erro: "Email não cadastrado"} (Quando o email nao existir no banco de dados)
+// 401 - {erro: "Email ou senha incorretos"} (Quando o email existir no banco de dados, mas a senha for incorreta)
+// 200 - {mensagem: "Usuário logado com sucesso", data: token} (Quando o email existir no banco de dados e a senha for correta)
+
 module.exports = {
     buscarTodosUsuarios,
     criarUsuario
