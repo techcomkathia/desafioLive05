@@ -2,14 +2,16 @@ const express = require('express');
 const sequelize = require('./config/bancoDados');
 const app = express();
 const rotasUsuarios = require('./routes/usuarioRoutes');
+const middlewerExemplo = require('./middlewer/middlewerExemplo');
 
 app.use(express.json());
+
 
 // configuração para o app usar o arquivo rota de usuarios
 
 app.get('/', (req, res) => {
-    res.json({mensagem: 'Bem vindo ao Desafio Live 05', data: new Date(), autora : 'Káthia Rocha Sá'});
-})
+  res.send('Rota principal');
+});
 
 //dar acesso as rotas de usuarios
 app.use('/usuarios', rotasUsuarios);
