@@ -3,6 +3,7 @@ const sequelize = require('./config/bancoDados');
 const app = express();
 const rotasUsuarios = require('./routes/usuarioRoutes');
 const middlewerExemplo = require('./middlewer/middlewerExemplo');
+const usuarioController = require('./controllers/usuarioController');
 
 app.use(express.json());
 
@@ -15,6 +16,9 @@ app.get('/', (req, res) => {
 
 //dar acesso as rotas de usuarios
 app.use('/usuarios', rotasUsuarios);
+
+//ROTA DE LOGIN
+app.post('/login', usuarioController.logar);
 
 // configuração para sincronizar o banco de dados e iniciar o servidor
 sequelize.sync({ alter: true }) // alter: true para atualizar as tabelas, caso elas tenham sido alteradas

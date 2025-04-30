@@ -1,0 +1,14 @@
+Crie uma rota de login que recebe um json com email e senha. Caso ambos estejam corretos retorne um JWT. 
+
+CAMADA DE SERVIÇOS :
+Construa as duas funções que fazem manipulações no banco através do model
+-Buscar um usuário
+-Logar 
+
+CAMADA DE CONTROLADORES:
+Use o serviço adequado e de acordo com o retorno monte o objeto de resposta com o status correto. 
+
+ARQUIVO PRINCIPAL
+Use o controller de login para a rota de login. 
+
+Faça o teste :)
